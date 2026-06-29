@@ -1,0 +1,63 @@
+{
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/out/**": true,
+        "**/vcpkg_installed/**": true,
+        "**/.git/**": true,
+        "**/.cache/**": true
+    },
+    "search.exclude": {
+        "**/build/**": true,
+        "**/out/**": true,
+        "**/vcpkg_installed/**": true,
+        "**/.git/**": true,
+        "**/.cache/**": true
+    },
+    "files.exclude": {
+        "**/build": true,
+        "**/libs": true,
+        "**/bin": true,
+        "**/.vscode": true,
+        ".clang*": true
+    },
+    "clangd.arguments": [
+        "--header-insertion=never",
+        "--completion-style=detailed",
+        "--pch-storage=memory",
+        "--fallback-style=none",
+        "-j=8"
+    ],
+    "explorer.copyRelativePathSeparator": "/",
+    "explorer.copyPathSeparator": "/",
+    "cmake.cmakePath": "C:/Program Files/CMake/bin/cmake.exe",
+    "cmake.generator": "Ninja",
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.useCMakePresets": "always",
+    "cmake.options.advanced": {
+        "configurePreset": {
+            "statusBarVisibility": "compact"
+        },
+        "build": {
+            "statusBarVisibility": "icon"
+        },
+        "debug": {
+            "statusBarVisibility": "icon"
+        },
+        "launch": {
+            "statusBarVisibility": "icon"
+        },
+        "buildTarget": {
+            "statusBarVisibility": "visible"
+        },
+        "launchTarget": {
+            "statusBarVisibility": "visible"
+        },
+        "ctest": {
+            "statusBarVisibility": "visible"
+        },
+        "testPreset": {
+            "statusBarVisibility": "visible"
+        }
+    }
+}

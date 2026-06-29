@@ -1,0 +1,33 @@
+CompileFlags:
+  Add: [
+    -Wpedantic,
+    -Wshadow,
+    -Wold-style-cast,
+    -Wformat=2,
+    -Woverloaded-virtual,
+    -Wno-unused-function
+  ]
+  CompilationDatabase: build/windows-debug/
+
+---
+# Để clangd không còn cảnh báo "Invalid argument '-std=c++23' not allowed with 'C'" vì file resource.h không còn bị phân tích như C nữa.
+If:
+  PathMatch: .*resource\.h$
+CompileFlags:
+  Add: [-xc++-header]
+---
+
+InlayHints:
+  BlockEnd: true
+
+Completion:  
+  ArgumentLists: Delimiters
+
+Diagnostics:
+  UnusedIncludes: Strict  # Strict/None
+  MissingIncludes: Strict # Strict/None
+  Suppress: [
+    c++98-compat,
+    c++98-compat-pedantic,
+    c++17-attribute-extensions
+  ]
