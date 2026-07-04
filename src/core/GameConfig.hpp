@@ -8,7 +8,7 @@ namespace GameConfig {
 
 inline constexpr int WINDOW_WIDTH{1280};
 inline constexpr int WINDOW_HEIGHT{720};
-inline constexpr char const* TITLE{"Pong"};
+inline constexpr char const* TITLEBAR{"Pong"};
 inline constexpr int FPS{60};
 
 namespace Text {
@@ -17,6 +17,10 @@ inline constexpr char const* PAUSED{"PAUSED"};
 inline constexpr char const* RESUME{"Resume"};
 inline constexpr char const* BACK_TO_MAIN_MENU{"Back To Main Menu"};
 
+inline constexpr char const* TITLEGAME{"PONG"};
+inline constexpr char const* START{"START"};
+inline constexpr char const* SETTINGS{"SETTINGS"};
+inline constexpr char const* EXIT{"EXIT"};
 } // namespace Text
 
 namespace ArenaConstants {

@@ -1,7 +1,7 @@
 #pragma once
 
-#include "IWidget.hpp"
-#include "Label.hpp"
+#include "ui/IWidget.hpp"
+#include "ui/Label.hpp"
 
 #include <cstddef>
 #include <cstdint>

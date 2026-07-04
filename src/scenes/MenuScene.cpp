@@ -1,7 +1,7 @@
-#include "MenuScene.hpp"
+#include "scenes/MenuScene.hpp"
 
-#include "SceneRequest.hpp"
 #include "core/GameConfig.hpp"
+#include "scenes/SceneRequest.hpp"
 #include "ui/Label.hpp"
 #include "ui/MenuList.hpp"
 
@@ -60,8 +60,8 @@ void MenuScene::onEnter() {
     }
 
     m_gamenameFont = m_assetManager.font("gamename_font");
-    m_titleGameLbl.emplace(
-        Label::createCenteredLabel(*m_gamenameFont, "PONG", GameConfig::WINDOW_HEIGHT / 6.0F));
+    m_titleGameLbl.emplace(Label::createCenteredLabel(
+        *m_gamenameFont, GameConfig::Text::TITLEGAME, GameConfig::WINDOW_HEIGHT / 6.0F));
     m_titleGameLbl->setColor({.r = 29, .g = 121, .b = 191, .a = 255});
 
     m_mainMenuItemsFont = m_assetManager.font("main_menu_items_font");
@@ -74,9 +74,12 @@ void MenuScene::onExit() {
 
 // Helper
 void MenuScene::drawMainMenu() {
-    m_menuList.addLabel(Label::createCenteredLabel(*m_mainMenuItemsFont, "START", 450.0F));
-    m_menuList.addLabel(Label::createCenteredLabel(*m_mainMenuItemsFont, "SETTINGS", 500.0F));
-    m_menuList.addLabel(Label::createCenteredLabel(*m_mainMenuItemsFont, "EXIT", 550.0F));
+    m_menuList.addLabel(
+        Label::createCenteredLabel(*m_mainMenuItemsFont, GameConfig::Text::START, 450.0F));
+    m_menuList.addLabel(
+        Label::createCenteredLabel(*m_mainMenuItemsFont, GameConfig::Text::SETTINGS, 500.0F));
+    m_menuList.addLabel(
+        Label::createCenteredLabel(*m_mainMenuItemsFont, GameConfig::Text::EXIT, 550.0F));
 
     m_menuList.onSelectionChanged([this]() {
         m_audioManager.playSound("select_item_sound");

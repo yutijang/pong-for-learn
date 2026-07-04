@@ -11,7 +11,7 @@
 
 bool Game::initializer() {
     SetConfigFlags(FLAG_MSAA_4X_HINT);
-    InitWindow(GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT, GameConfig::TITLE);
+    InitWindow(GameConfig::WINDOW_WIDTH, GameConfig::WINDOW_HEIGHT, GameConfig::TITLEBAR);
     SetTargetFPS(GameConfig::FPS);
     InitAudioDevice();
 

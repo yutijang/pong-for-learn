@@ -1,6 +1,6 @@
 #pragma once
 
-#include "IWidget.hpp"
+#include "ui/IWidget.hpp"
 
 #include <cstdint>
 #include <functional>

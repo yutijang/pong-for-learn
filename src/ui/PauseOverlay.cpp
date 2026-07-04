@@ -1,4 +1,4 @@
-#include "PauseOverlay.hpp"
+#include "ui/PauseOverlay.hpp"
 
 #include "core/GameConfig.hpp"
 #include "ui/Label.hpp"

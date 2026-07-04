@@ -1,4 +1,4 @@
-#include "Label.hpp"
+#include "ui/Label.hpp"
 
 #include "core/GameConfig.hpp"
 
